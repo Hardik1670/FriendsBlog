@@ -1,0 +1,40 @@
+﻿
+@using MvcFriendsSite.Models;
+<h3>Blog List</h3>
+
+<table class="table">
+    <thead class="table-dark">
+    <th>User Name </th>
+    <th>Blog Category </th>
+    <th>Headline</th>
+    <th>Content</th>
+
+    </thead>
+    <tbody class="table-light">
+
+
+        @foreach (BlogModel blog in ModelList)
+        {
+            <tr>
+                <td>@blog.Author.userName</td>
+                <td>@blog.Name</td>
+
+                <td>@blog.Headline</td>
+                <td>@blog.Content</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
+
+
+
+
+
+@code {
+
+    [Parameter]
+    public IEnumerable<BlogModel> ModelList { get; set; }
+
+}

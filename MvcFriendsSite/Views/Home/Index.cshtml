@@ -1,0 +1,49 @@
+﻿@using MvcFriendsSite.Views.Components
+
+
+@{
+    ViewData["Title"] = "Home Page";
+
+    IList<BlogModel> blogs = new List<BlogModel>();
+    UserModel user = new UserModel
+    {
+
+
+
+    };
+
+    blogs.Add(new BlogModel
+    {
+        Author = new UserModel { userName = "David", email = "david@gmail.com" },
+        Name = "Culture",
+        Headline = "Christmas Around",
+        Content = "Jingle Bell Jingle Bell",
+
+
+    });
+    blogs.Add(new BlogModel
+    {
+        Author = new UserModel
+        {
+            userName = "Andrew",
+            email = "andrew@gmail.com"
+
+        },
+
+
+        Name = "Movies",
+        Headline = "Pirates Of Carribean",
+        Content = "To Be Released Soon"
+    });
+
+
+
+
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@(await Html.RenderComponentAsync<BlogList>(RenderMode.ServerPrerendered, new BlogList { ModelList = blogs }))
