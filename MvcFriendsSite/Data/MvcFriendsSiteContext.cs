@@ -14,6 +14,15 @@ namespace MvcFriendsSite.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+           /// modelBuilder.Entity<BlogModel>().HasOne<UserModel>;
+            //modelBuilder.Entity<UserModel>().HasMany<BlogModel>;
+        }
+
+
+
         public DbSet<MvcFriendsSite.Models.UserModel> UserModel { get; set; }
 
         public DbSet<MvcFriendsSite.Models.SocialModel> SocialModel { get; set; }

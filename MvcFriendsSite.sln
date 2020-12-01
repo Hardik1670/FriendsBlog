@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcFriendsSite", "MvcFriendsSite\MvcFriendsSite.csproj", "{05F94BDC-E8E2-4358-88B2-9E4294FE7B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogComponents", "BlogComponents\BlogComponents.csproj", "{7ACE47DF-74E6-43BD-9FC9-C6FE9087787D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogComponents", "BlogComponents\BlogComponents.csproj", "{7ACE47DF-74E6-43BD-9FC9-C6FE9087787D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

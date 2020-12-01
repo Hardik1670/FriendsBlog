@@ -564,3 +564,5 @@ C:\Users\navne\source\repos\MVCFriendsSiteHardik\MvcFriendsSite\obj\Debug\netcor
 C:\Users\navne\source\repos\MVCFriendsSiteHardik\MvcFriendsSite\obj\Debug\netcoreapp3.1\Razor\Views\BlogModels\Details.cshtml.g.cs
 C:\Users\navne\source\repos\MVCFriendsSiteHardik\MvcFriendsSite\obj\Debug\netcoreapp3.1\Razor\Views\BlogModels\Edit.cshtml.g.cs
 C:\Users\navne\source\repos\MVCFriendsSiteHardik\MvcFriendsSite\obj\Debug\netcoreapp3.1\Razor\Views\BlogModels\Index.cshtml.g.cs
+C:\Users\navne\source\repos\MVCFriendsSiteHardik\MvcFriendsSite\obj\Debug\netcoreapp3.1\RazorDeclaration\Views\Components\AuthorList.razor.g.cs
+C:\Users\navne\source\repos\MVCFriendsSiteHardik\MvcFriendsSite\obj\Debug\netcoreapp3.1\Razor\Views\Components\AuthorList.razor.g.cs
