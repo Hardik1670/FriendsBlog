@@ -1,0 +1,21 @@
+﻿
+@using MvcFriendsSite.Models
+<div>
+
+<h3>@Blog.Name</h3>
+<p>@Blog.Content</p>
+
+</div>
+
+
+
+<a href="@Url/@Blog.Id">@Blog.Name</a>
+
+
+@code {
+
+    [Parameter]
+    public BlogModel Blog { get; set; }
+    [Parameter]
+    public string Url { get; set; }
+}

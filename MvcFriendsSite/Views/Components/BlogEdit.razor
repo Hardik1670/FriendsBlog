@@ -1,0 +1,129 @@
+﻿@using MvcFriendsSite.Models
+@using System.Web
+<h3>BlogEdit</h3>
+<form action="@url" method="post">
+    <input type="hidden" name="Id" value="@blog.Id" />
+
+    <div class="form-group">
+        <label for="name" class="control-label">Name:</label>
+        <input name="name" class="form-control" value="@blog.Name" type="text" />
+    </div>
+
+    <div class="form-group">
+        <label for="headline" class="control-label">Headline:</label>
+        <input name="headline" class="form-control" value="@blog.Headline" type="text" />
+    </div>
+
+    <div class="form-group">
+        <label for="Content" class="control-label">Content:</label>
+        <textarea name="Content">@blog.Content</textarea>
+    </div>
+
+
+    @* @if (isAuthorAvailable)
+        {
+    *@
+    <h1>Author Name :<span>@blog.Author.userName</span></h1>
+    <input type="hidden" name="Author.Id" value="@blog.Author.Id" />
+
+    @*}
+        else
+        {
+        <select>
+            @foreach (UserModel author in _authors)
+            {
+                <option value="value">@author.userName , @author.socialWebsite</option>
+
+            }
+        </select>
+
+
+        }
+    *@
+
+    <input type="submit" name="submit" value="@buttonMode" />
+</form>
+
+@code {
+
+
+
+
+    private BlogModel _blog = new BlogModel();
+    protected string url
+    {
+        get
+        {
+            if (_blog.Id < 1)
+            {
+                return baseUrl.Concat("/Create").ToString().Replace("//", "/");
+            }
+            else
+            {
+                return baseUrl.Concat("/Edit/").Concat(_blog.Id.ToString()).ToString().Replace("//", "/");
+            }
+        }
+    }
+
+    private IEnumerable<UserModel> _authors
+    {
+        get
+        {
+            return new List<UserModel>();
+
+        }
+    }
+
+
+    protected string buttonMode
+    {
+        get
+        {
+            if(_blog.Id < 1)
+            {
+                return "Create New Post";
+            }
+            else
+            {
+                return "Update Post";
+            }
+
+
+        }
+    }
+
+
+    private bool isAuthorAvailable
+    {
+        get
+        {
+            if (_blog.Id < 1)
+            {
+                return false;
+            }
+            return true;
+
+        }
+    }
+
+
+    [Parameter]
+    public BlogModel blog {
+        set
+        {
+            _blog = value;
+
+        }
+
+        get
+        {
+            return _blog;
+        }
+
+
+    }
+
+    [Parameter]
+    public string baseUrl { get; set; }
+
+}
